@@ -4,7 +4,7 @@
 
 This is my personal portfolio website, designed and developed to showcase my skills, projects, and experience as a Full Stack Developer.
 
-👉 [Check it out here](https://nandabri.github.io/portfolio/)
+👉 [Check it out here](https://nandabri.github.io/myPortfolio/)
 
 ---
 

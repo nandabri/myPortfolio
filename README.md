@@ -10,7 +10,7 @@ This is my personal portfolio website, designed and developed to showcase my ski
 
 ## 💡 About the Project
 
-This project was built using **HTML**, **CSS**, and **JavaScript**.  
+This project was built using **HTML**, **CSS**, and **JavaScript**.
 I focused on creating a clean, responsive, and accessible design.
 
 ---
@@ -35,13 +35,13 @@ I focused on creating a clean, responsive, and accessible design.
 
 ## 📸 Preview
 
-![Portfolio Screenshot](portfolioFer.png)  
+![Portfolio Screenshot](portfolioFer.png)
 ![Portfolio Mobile Screenshot](portifolioFerMobile.png)
 
 ---
 
 ## ⚖️ License
 
-This project is open for learning purposes. Feel free to get inspired, but please don’t copy. 
+This project is open for learning purposes. Feel free to get inspired, but please don’t copy. © 2025 All rights reserved | Designed and developed by Fernanda Belmont
 
 **Thank you for visiting my portfolio! 💖✨**

@@ -876,8 +876,7 @@
         }
 
         /* Cursor pointer para imagens clicáveis */
-        .about-photo img,
-        .project-card img {
+        .about-photo img {
             cursor: pointer;
         }
 
@@ -1122,7 +1121,9 @@
                 <h3 data-i18n="project-1-title">Shalom Practice</h3>
                 <p data-i18n="project-1-subtitle">A Platform for Learning Hebrew</p>
                 <div class="project-card">
-                    <img src="shalommapratica.png" alt="Shalom Practice Project" loading="lazy">
+                    <a href="https://github.com/nandabri/" target="_blank" rel="noopener noreferrer">
+                        <img src="shalommapratica.png" alt="Shalom Practice Project" loading="lazy">
+                    </a>
                 </div>
             </div>
 
@@ -1130,7 +1131,9 @@
                 <h3 data-i18n="project-2-title">Eretz Hatikvah Tours</h3>
                 <p data-i18n="project-2-subtitle">Tourism site for Eretz Hatikvah</p>
                 <div class="project-card">
-                    <img src="eretzhativkafoto.png" alt="Eretz Hatikvah Tours Project" loading="lazy">
+                    <a href="https://github.com/nandabri/" target="_blank" rel="noopener noreferrer">
+                        <img src="eretzhatikvah.png" alt="Eretz Hatikvah Tours Project" loading="lazy">
+                    </a>
                 </div>
             </div>
 
@@ -1138,7 +1141,9 @@
                 <h3 data-i18n="project-3-title">MindEasy</h3>
                 <p data-i18n="project-3-subtitle">Mental Health Clinic Management Platform</p>
                 <div class="project-card">
-                    <img src="mobileMindEasy.png" alt="MindEasy Project" loading="lazy">
+                    <a href="https://github.com/nandabri/" target="_blank" rel="noopener noreferrer">
+                        <img src="mobileMindEasy.png" alt="MindEasy Project" loading="lazy">
+                    </a>
                 </div>
             </div>
 
@@ -1146,7 +1151,9 @@
                 <h3 data-i18n="project-4-title">GrowKid</h3>
                 <p data-i18n="project-4-subtitle">Child Development Monitoring Platform</p>
                 <div class="project-card">
-                    <img src="cresca.png" alt="GrowKid Project" loading="lazy">
+                    <a href="https://github.com/nandabri/" target="_blank" rel="noopener noreferrer">
+                        <img src="cresca.png" alt="GrowKid Project" loading="lazy">
+                    </a>
                 </div>
             </div>
         </div>
@@ -1514,8 +1521,8 @@
                 });
             }
 
-            // Adiciona event listeners para todas as imagens clicáveis
-            const clickableImages = document.querySelectorAll('.about-photo img, .project-card img');
+            // Adiciona event listeners apenas para as imagens da galeria pessoal (About)
+            const clickableImages = document.querySelectorAll('.about-photo img');
             console.log('Imagens clicáveis encontradas:', clickableImages.length);
 
             clickableImages.forEach(img => {

@@ -275,6 +275,7 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             width: 100%;
             height: 250px;
+            position: relative;
         }
 
         .project-card:hover {
@@ -291,6 +292,180 @@
 
         .project-card:hover img {
             transform: scale(1.05);
+        }
+
+        /* Overlay com header e footer */
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 0.7) 0%,
+                    rgba(0, 0, 0, 0.1) 30%,
+                    rgba(0, 0, 0, 0.1) 70%,
+                    rgba(0, 0, 0, 0.8) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-header {
+            text-align: center;
+        }
+
+        .project-title-overlay {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .project-footer {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .project-btn-overlay {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-btn-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .project-btn-overlay:hover::before {
+            left: 100%;
+        }
+
+        .project-btn-overlay.github {
+            background: linear-gradient(135deg, rgba(36, 41, 46, 0.9), rgba(13, 17, 23, 0.95));
+            border-color: rgba(139, 148, 158, 0.4);
+        }
+
+        .project-btn-overlay.github:hover {
+            background: linear-gradient(135deg, rgba(48, 54, 61, 0.95), rgba(33, 38, 45, 0.98));
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            border-color: rgba(139, 148, 158, 0.6);
+        }
+
+        .project-btn-overlay.demo {
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.9), rgba(126, 34, 206, 0.95));
+            border-color: rgba(196, 181, 253, 0.4);
+        }
+
+        .project-btn-overlay.demo:hover {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.95), rgba(147, 51, 234, 0.98));
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(147, 51, 234, 0.4);
+            border-color: rgba(196, 181, 253, 0.6);
+        }
+
+        /* Dark mode para overlay */
+        body.dark-mode .project-btn-overlay.github {
+            background: linear-gradient(135deg, rgba(75, 85, 99, 0.9), rgba(55, 65, 81, 0.95));
+            border-color: rgba(156, 163, 175, 0.4);
+        }
+
+        body.dark-mode .project-btn-overlay.github:hover {
+            background: linear-gradient(135deg, rgba(107, 114, 128, 0.95), rgba(75, 85, 99, 0.98));
+            border-color: rgba(156, 163, 175, 0.6);
+        }
+
+        body.dark-mode .project-btn-overlay.demo {
+            background: linear-gradient(135deg, rgba(196, 181, 253, 0.9), rgba(167, 139, 250, 0.95));
+            color: #1f2937;
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
+        }
+
+        body.dark-mode .project-btn-overlay.demo:hover {
+            background: linear-gradient(135deg, rgba(221, 214, 254, 0.95), rgba(196, 181, 253, 0.98));
+            box-shadow: 0 8px 25px rgba(196, 181, 253, 0.4);
+        }
+
+        /* Responsivo para overlay */
+        @media (max-width: 768px) {
+            .project-overlay {
+                opacity: 1;
+                /* Sempre visível no mobile */
+                background: linear-gradient(to bottom,
+                        rgba(0, 0, 0, 0.6) 0%,
+                        rgba(0, 0, 0, 0.05) 30%,
+                        rgba(0, 0, 0, 0.05) 70%,
+                        rgba(0, 0, 0, 0.7) 100%);
+            }
+
+            .project-footer {
+                gap: 0.6rem;
+            }
+
+            .project-btn-overlay {
+                padding: 8px 14px;
+                font-size: 0.8rem;
+                border-radius: 20px;
+                gap: 4px;
+            }
+
+            .project-title-overlay {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-footer {
+                gap: 0.4rem;
+            }
+
+            .project-btn-overlay {
+                padding: 6px 12px;
+                font-size: 0.75rem;
+                gap: 3px;
+            }
+
+            .project-title-overlay {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Botões dos projetos - REMOVER OS ANTIGOS */
+        .project-links {
+            display: none;
+            /* Esconder os botões antigos */
         }
 
         .projects li,
@@ -1121,9 +1296,24 @@
                 <h3 data-i18n="project-1-title">Shalom Practice</h3>
                 <p data-i18n="project-1-subtitle">A Platform for Learning Hebrew</p>
                 <div class="project-card">
-                    <a href="https://github.com/nandabri/" target="_blank" rel="noopener noreferrer">
-                        <img src="shalommapratica.png" alt="Shalom Practice Project" loading="lazy">
-                    </a>
+                    <img src="shalommapratica.png" alt="Shalom Practice Project" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-header">
+                            <h4 class="project-title-overlay" data-i18n="project-1-title">Shalom Practice</h4>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/nandabri/shalom-practice" target="_blank"
+                                rel="noopener noreferrer" class="project-btn-overlay github">
+                                <img src="github.png" alt="GitHub"
+                                    style="width: 16px; height: 16px; margin-right: 6px;">
+                                GitHub
+                            </a>
+                            <a href="https://nandabri.github.io/shalom-practice" target="_blank"
+                                rel="noopener noreferrer" class="project-btn-overlay demo">
+                                🚀 Demo
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -1131,9 +1321,24 @@
                 <h3 data-i18n="project-2-title">Eretz Hatikvah Tours</h3>
                 <p data-i18n="project-2-subtitle">Tourism site for Eretz Hatikvah</p>
                 <div class="project-card">
-                    <a href="https://github.com/nandabri/" target="_blank" rel="noopener noreferrer">
-                        <img src="eretzhatikvah.png" alt="Eretz Hatikvah Tours Project" loading="lazy">
-                    </a>
+                    <img src="eretzhatikvah.png" alt="Eretz Hatikvah Tours Project" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-header">
+                            <h4 class="project-title-overlay" data-i18n="project-2-title">Eretz Hatikvah Tours</h4>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/nandabri/eretzHatikvah" target="_blank"
+                                rel="noopener noreferrer" class="project-btn-overlay github">
+                                <img src="github.png" alt="GitHub"
+                                    style="width: 16px; height: 16px; margin-right: 6px;">
+                                GitHub
+                            </a>
+                            <a href="https://nandabri.github.io/eretzHatikvah/" target="_blank"
+                                rel="noopener noreferrer" class="project-btn-overlay demo">
+                                🚀 Demo
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -1141,9 +1346,24 @@
                 <h3 data-i18n="project-3-title">MindEasy</h3>
                 <p data-i18n="project-3-subtitle">Mental Health Clinic Management Platform</p>
                 <div class="project-card">
-                    <a href="https://github.com/nandabri/" target="_blank" rel="noopener noreferrer">
-                        <img src="mobileMindEasy.png" alt="MindEasy Project" loading="lazy">
-                    </a>
+                    <img src="mobileMindEasy.png" alt="MindEasy Project" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-header">
+                            <h4 class="project-title-overlay" data-i18n="project-3-title">MindEasy</h4>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/nandabri/mindeasy" target="_blank" rel="noopener noreferrer"
+                                class="project-btn-overlay github">
+                                <img src="github.png" alt="GitHub"
+                                    style="width: 16px; height: 16px; margin-right: 6px;">
+                                GitHub
+                            </a>
+                            <a href="https://nandabri.github.io/mindeasy" target="_blank" rel="noopener noreferrer"
+                                class="project-btn-overlay demo">
+                                🚀 Demo
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -1151,9 +1371,24 @@
                 <h3 data-i18n="project-4-title">GrowKid</h3>
                 <p data-i18n="project-4-subtitle">Child Development Monitoring Platform</p>
                 <div class="project-card">
-                    <a href="https://github.com/nandabri/" target="_blank" rel="noopener noreferrer">
-                        <img src="cresca.png" alt="GrowKid Project" loading="lazy">
-                    </a>
+                    <img src="cresca.png" alt="GrowKid Project" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-header">
+                            <h4 class="project-title-overlay" data-i18n="project-4-title">GrowKid</h4>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/nandabri/growkid" target="_blank" rel="noopener noreferrer"
+                                class="project-btn-overlay github">
+                                <img src="github.png" alt="GitHub"
+                                    style="width: 16px; height: 16px; margin-right: 6px;">
+                                GitHub
+                            </a>
+                            <a href="https://nandabri.github.io/growkid" target="_blank" rel="noopener noreferrer"
+                                class="project-btn-overlay demo">
+                                🚀 Demo
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

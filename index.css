@@ -166,6 +166,7 @@ body.dark-mode .lang-button {
     color: #343a40;
 }
 
+
 .btn {
     display: inline-block;
     margin-top: 2rem;
@@ -177,6 +178,7 @@ body.dark-mode .lang-button {
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s;
+}
 }
 
 .btn:hover {
@@ -1134,4 +1136,9 @@ section p {
     }
 }
 
-/* ...existing code... */
+#contact a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: none;
+    outline: none;
+}

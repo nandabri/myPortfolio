@@ -191,6 +191,7 @@ body.dark-mode .lang-button {
 }
 
 .btn {
+        text-decoration: none;
     display: inline-block;
     margin-top: 2rem;
     padding: 12px 30px;
@@ -201,6 +202,10 @@ body.dark-mode .lang-button {
     font-size: 1rem;
     cursor: pointer;
     transition: background .3s
+}
+
+.btn:hover {
+    background-color: #3c096c;
 }
 
 .projects,
@@ -1045,4 +1050,22 @@ section p {
         left: 10px;
         right: auto
     }
+}
+
+#contact a {
+    text-decoration: none;
+    color: white;
+    border-bottom: none;
+    outline: none;
+}
+
+.fotoCentral .btn {
+    background-color: #5a189a;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
 }

@@ -4,22 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fernanda | Fullstack Developer</title>
+    <title>Fernanda | Fullstack Web & App Developer</title>
 
     <meta name="description"
         content="Fernanda Belmont’s portfolio, Full Stack Developer. Projects, skills, technologies, and contact.">
     <meta name="keywords"
         content="Full Stack, JavaScript, React, Node.js, HTML, CSS, developer, Fernanda Belmont, portfolio">
     <!-- Open Graph (Facebook, LinkedIn, etc.) -->
-    <meta property="og:title" content="Fernanda Belmont | Fullstack Developer">
+    <meta property="og:title" content="Fernanda Belmont | Fullstack Web & App Developer">
     <meta property="og:description"
         content="Fernanda Belmont’s portfolio, Full Stack Developer. Projects, skills, technologies, and contact.">
     <meta property="og:image" content="logoFernanda.png">
-    <meta property="og:url" content="https://nandabri.github.io/portfolio/">
+    <meta property="og:url" content="https://nandabri.github.io/myPortfolio/">
     <meta property="og:type" content="website">
 
     <!-- Twitter Cards -->
-    <meta name="twitter:title" content="Fernanda Belmont | Fullstack Developer">
+    <meta name="twitter:title" content="Fernanda Belmont | Fullstack Web & App Developer">
     <meta name="twitter:description"
         content="Fernanda Belmont’s portfolio, Full Stack Developer. Projects, skills, technologies, and contact.">
     <meta name="twitter:card" content="summary_large_image">
@@ -57,8 +57,9 @@
         </div>
 
         <!-- Menu Mobile -->
+
         <div class="hamburger-container mobile-only">
-            <div class="menu-toggle" aria-label="Abrir menu de navegação" onclick="toggleMobileMenu()">☰</div>
+            <div class="menu-toggle" aria-label="Open Menu Navigation" onclick="toggleMobileMenu()">☰</div>
 
             <div class="menu-dropdown">
                 <nav class="menunav">
@@ -78,7 +79,7 @@
             </div>
         </div>
 
-        <button id="theme-toggle" class="btn" aria-label="Alternar modo claro/escuro">
+        <button id="theme-toggle" class="btn" aria-label="Change light/dark mode">
             <span class="theme-text">Dark Mode</span> </button>
 
     </header>
@@ -246,10 +247,25 @@
         </div>
     </section>
 
-    <section id="contact" class="mycontact">
-        <h2 data-i18n="contact-title">Contact</h2>
-        <div class="form-container">
-            <form action="mailto:rivlisnanda@gmail.com" method="post" enctype="text/plain">
+
+
+
+
+
+<section id="contact" class="mycontact">
+    <h2 data-i18n="contact-title">Contact</h2>
+    <div class="form-container">
+        <form action="https://formsubmit.co/rivlisnanda@gmail.com" method="POST">
+<!-- Anti-spam honeypot -->
+<input type="text" name="_honey" style="display:none">
+
+<!-- Desativa captcha -->
+<input type="hidden" name="_captcha" value="false">
+
+<!-- Redirecionamento após envio -->
+<input type="hidden" name="_next" value="https://nandabri.github.io/myPortfolio/thankyou.html">
+
+
                 <label for="name" data-i18n="name-label">Name</label>
                 <input type="text" id="name" name="name" required>
 

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #f3e8ff 0%, #e0c3fc 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .thankyou-container {
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(90, 24, 154, 0.10);
+            padding: 40px 32px 32px 32px;
+            max-width: 380px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .thankyou-illustration {
+            width: 120px;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            color: #614caf;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #4b3869;
+            margin-bottom: 18px;
+        }
+
+        .thankyou-btn {
+            background: linear-gradient(90deg, #7c3aed 0%, #9c6ccc 100%);
+            color: #fff;
+            border: none;
+            padding: 12px 32px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-top: 18px;
+            box-shadow: 0 2px 8px rgba(90, 24, 154, 0.08);
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        .thankyou-btn:hover,
+        .thankyou-btn:focus {
+            background: linear-gradient(90deg, #9c6ccc 0%, #7c3aed 100%);
+            transform: translateY(-2px) scale(1.04);
+        }
+
+        @media (max-width: 500px) {
+            .thankyou-container {
+                padding: 24px 8px 24px 8px;
+            }
+
+            .thankyou-illustration {
+                width: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="thankyou-container">
+        <svg class="thankyou-illustration" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="60" r="56" fill="#f3e8ff" />
+            <path d="M38 62l16 16 28-32" stroke="#5a189a" stroke-width="6" stroke-linecap="round"
+                stroke-linejoin="round" fill="none" />
+            <ellipse cx="60" cy="100" rx="28" ry="7" fill="#e0c3fc" opacity=".7" />
+            <path d="M80 40c0-8-8-14-20-14s-20 6-20 14c0 6 6 11 14 13" stroke="#bb86fc" stroke-width="2.5"
+                fill="none" />
+            <circle cx="32" cy="38" r="2.5" fill="#7c3aed" />
+            <circle cx="92" cy="38" r="2.5" fill="#7c3aed" />
+            <rect x="25" y="70" width="4" height="8" rx="2" fill="#7c3aed" transform="rotate(-20 25 70)" />
+            <rect x="91" y="70" width="4" height="8" rx="2" fill="#7c3aed" transform="rotate(20 91 70)" />
+            <rect x="55" y="18" width="4" height="8" rx="2" fill="#7c3aed" />
+            <rect x="80" y="90" width="4" height="8" rx="2" fill="#7c3aed" />
+            <rect x="35" y="90" width="4" height="8" rx="2" fill="#7c3aed" />
+        </svg>
+        <h1>Thank you for your submission!</h1>
+        <p>I will get back to you soon.</p>
+        <button class="thankyou-btn" onclick="window.location.href='index.html'">Go Back</button>
+    </div>

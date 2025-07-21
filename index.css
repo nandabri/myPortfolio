@@ -578,11 +578,11 @@ body.dark-mode section p {
     border-radius: 50%;
     pointer-events: none;
     background:
-        repeating-linear-gradient(120deg, #7c3aed 0 16px, transparent 16px 32px),
-        repeating-linear-gradient(60deg, #a855f7 0 12px, transparent 12px 24px),
+        repeating-linear-gradient(127deg, #7c3aed 0 16px, transparent 16px 32px),
+        repeating-linear-gradient(64.2deg, #a855f7 0 12px, transparent 12px 24px),
         repeating-linear-gradient(150deg, #3b82f6 0 8px, transparent 8px 16px);
     opacity: 0.7;
-    animation: moveLines 4s linear infinite;
+    animation: moveLines 2s linear infinite;
 }
 
 @keyframes moveLines {
@@ -591,7 +591,7 @@ body.dark-mode section p {
     }
 
     100% {
-        background-position: 60px 40px, -40px 60px, 30px -30px;
+        background-position: 60px 0, -40px 0, 60px 0, -40px 0;
     }
 }
 
@@ -1284,12 +1284,12 @@ form {
         z-index: 1;
         border-radius: 50%;
         pointer-events: none;
-        background:
-            repeating-linear-gradient(120deg, #bb86fc 0 16px, transparent 16px 32px),
-            repeating-linear-gradient(60deg, #985eff 0 12px, transparent 12px 24px),
-            repeating-linear-gradient(150deg, #7c3aed 0 8px, transparent 8px 16px);
+    background:
+            repeating-linear-gradient(127deg, #7c3aed 0 16px, transparent 16px 32px),
+            repeating-linear-gradient(53deg, #a855f7 0 12px, transparent 12px 24px),
+            repeating-linear-gradient(111deg, #3b82f6 0 8px, transparent 8px 16px);
         opacity: 0.7;
-        animation: moveLines 4s linear infinite;
+        animation: moveLines 2s linear infinite;
     }
 
     body.dark-mode .foto-perfil-wrapper::before {
@@ -1302,10 +1302,10 @@ form {
         border-radius: 50%;
         pointer-events: none;
         background:
-            repeating-linear-gradient(120deg, #bb86fc 0 16px, transparent 16px 32px),
-            repeating-linear-gradient(60deg, #985eff 0 12px, transparent 12px 24px),
-            repeating-linear-gradient(150deg, #7c3aed 0 8px, transparent 8px 16px);
+            repeating-linear-gradient(127deg, #7c3aed 0 16px, transparent 16px 32px),
+            repeating-linear-gradient(53deg, #a855f7 0 12px, transparent 12px 24px),
+            repeating-linear-gradient(111deg, #3b82f6 0 8px, transparent 8px 16px);
         opacity: 0.7;
-        animation: moveLines 4s linear infinite;
+        animation: moveLines 2s linear infinite;
     }
 }

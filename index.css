@@ -1,3 +1,18 @@
+#contact form label {
+    width: 100%;
+    font-weight: 600;
+    text-align: left;
+    color: #000000;
+    margin-top: .7rem;
+    margin-bottom: .2rem;
+    letter-spacing: .01em;
+    font-size: 1.1rem;
+}
+
+body.dark-mode #contact form label {
+    color: #efe9e9;
+}
+
 body.dark-mode[dir=rtl] #contact form,
 body.dark-mode[dir=rtl] #contact form label,
 body.dark-mode[dir=rtl] #contact form input,
@@ -81,13 +96,18 @@ body.dark-mode .social-btn {
 
 body.dark-mode #contact form label {
     width: 100%;
-    font-weight: 600;
+    font-weight: 400;
     text-align: left;
-    color: #ffffff;
+    color: rgb(255, 255, 255);
     margin-top: .7rem;
     margin-bottom: .2rem;
     letter-spacing: .01em;
     font-size: 1.1rem
+}
+
+body.dark-mode #contact form {
+    background: linear-gradient(145deg, #3c0660, #33035e);
+    border: 1px solid #333;
 }
 
 body.dark-mode .social-btn:focus,
@@ -541,7 +561,38 @@ body.dark-mode section p {
     width: 100%;
     max-width: 100%;
     overflow: visible;
-    padding: 1rem 0
+    padding: 1rem 0;
+    position: relative;
+}
+
+/* Linhas animadas atrás da foto de perfil */
+.foto-perfil-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 160px;
+    height: 160px;
+    z-index: 1;
+    border-radius: 50%;
+    pointer-events: none;
+    background:
+        repeating-linear-gradient(120deg, #7c3aed 0 16px, transparent 16px 32px),
+        repeating-linear-gradient(60deg, #a855f7 0 12px, transparent 12px 24px),
+        repeating-linear-gradient(150deg, #3b82f6 0 8px, transparent 8px 16px);
+    opacity: 0.7;
+    animation: moveLines 4s linear infinite;
+}
+
+@keyframes moveLines {
+    0% {
+        background-position: 0 0, 0 0, 0 0;
+    }
+
+    100% {
+        background-position: 60px 40px, -40px 60px, 30px -30px;
+    }
 }
 
 .foto-perfil {
@@ -551,8 +602,9 @@ body.dark-mode section p {
     border-radius: 50%;
     object-fit: cover;
     display: block;
-    background-color: #444;
-    box-shadow: 0 4px 15px rgba(255, 255, 255, .2)
+    box-shadow: 0 4px 15px rgba(255, 255, 255, .2);
+    position: relative;
+    z-index: 2;
 }
 
 @media (max-width:768px) {
@@ -862,7 +914,6 @@ body.dark-mode #btnToTop {
 }
 
 body.dark-mode .foto-perfil {
-    background-color: #2a003f;
     box-shadow: 0 4px 15px rgba(0, 0, 0, .2)
 }
 
@@ -1158,7 +1209,7 @@ form {
     max-width: 500px;
     width: 100%;
     margin: 0 0 2rem;
-    background-color: #33035e;
+    background: linear-gradient(145deg, #e0c3fc, #8ec5fc);
     padding: 2rem 1.5rem 1.5rem;
     border-radius: 20px;
     box-shadow: 0 4px 24px 0 rgba(90, 24, 154, .1);
@@ -1169,7 +1220,7 @@ form {
     width: 100%;
     font-weight: 600;
     text-align: left;
-    color: #ffffff;
+    color: #000000;
     margin-top: .7rem;
     margin-bottom: .2rem;
     letter-spacing: .01em;
@@ -1222,5 +1273,39 @@ form {
     #contact form {
         padding: 1rem .5rem;
         max-width: 98vw
+    }
+
+    .foto-perfil-wrapper::before {
+        width: 120px;
+        height: 120px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        border-radius: 50%;
+        pointer-events: none;
+        background:
+            repeating-linear-gradient(120deg, #bb86fc 0 16px, transparent 16px 32px),
+            repeating-linear-gradient(60deg, #985eff 0 12px, transparent 12px 24px),
+            repeating-linear-gradient(150deg, #7c3aed 0 8px, transparent 8px 16px);
+        opacity: 0.7;
+        animation: moveLines 4s linear infinite;
+    }
+
+    body.dark-mode .foto-perfil-wrapper::before {
+        width: 120px;
+        height: 120px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        border-radius: 50%;
+        pointer-events: none;
+        background:
+            repeating-linear-gradient(120deg, #bb86fc 0 16px, transparent 16px 32px),
+            repeating-linear-gradient(60deg, #985eff 0 12px, transparent 12px 24px),
+            repeating-linear-gradient(150deg, #7c3aed 0 8px, transparent 8px 16px);
+        opacity: 0.7;
+        animation: moveLines 4s linear infinite;
     }
 }
